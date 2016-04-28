@@ -1,6 +1,4 @@
 #!/usr/bin/perl
-use strict;
-use warnings;
 use POE;
 use POE::Component::IRC;
 use WWW::BashOrg;
@@ -25,14 +23,14 @@ sub bot_start {
 			Ircname => 'POE::Component::IRC',
 			Server => 'irc.rizon.sexy',
 			Port => 6667,
-			debug => 1,
+			debug => 0,
 			Nick => 'wubbot',
 		}
 	);
 }
 
 sub on_connect {
-	$irc->yield(nickserv => "IDENTIFY wubbotlovesyou");
+	$irc->yield(nickserv => "IDENTIFY ****");
 	$irc->yield(join => CHANNEL);
 }
 
