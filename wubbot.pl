@@ -62,6 +62,11 @@ sub on_public {
                 $irc->yield(privmsg => $channel, "Eh!");
         }
 }
+         }
+        elsif(lc($msg) =~ /.bots/) {
+                $irc->yield(privmsg => $channel, "Reporting in! https://github.com/juboo/smallies/wubbot.pl");
+        }
+}
 
 $poe_kernel->run();
 exit 0;
