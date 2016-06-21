@@ -30,7 +30,7 @@ sub bot_start {
 }
 
 sub on_connect {
-        $irc->yield(nickserv => "IDENTIFY wubbotlovesyou"); # Don't steal password please
+        $irc->yield(nickserv => "IDENTIFY nickservpasshere"); 
         $irc->yield(join => CHANNEL);
 }
 
