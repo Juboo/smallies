@@ -64,7 +64,7 @@ sub on_public {
 }
          }
         elsif(lc($msg) =~ /.bots/) {
-                $irc->yield(privmsg => $channel, "Reporting in! https://github.com/juboo/smallies/wubbot.pl");
+                $irc->yield(privmsg => $channel, "Reporting in! https://github.com/Juboo/smallies/blob/master/wubbot.pl");
         }
 }
 
